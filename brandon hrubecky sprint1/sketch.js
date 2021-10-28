@@ -186,12 +186,14 @@ function playMagic() {
 function drawSquares() {
     
     for (let i = 0; i < 10; i++) {
-        num = Math.floor(Math.random() * windowWidth + 200);
+        num = Math.floor(Math.random() * windowWidth + 260);
         
-        num2 = Math.floor(Math.random() * windowHeight + 200);
+        num2 = Math.floor(Math.random() * windowHeight + 150);
         
         num3 = Math.floor(Math.random() * 300);
         fill(200, 75 + num2, 45 + num);
+        
+        
         noStroke();
         square(num, num2, num3);
     }
