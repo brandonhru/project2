@@ -1,10 +1,3 @@
-/* 
-This sketch uses a lot of code that was written by Doug Whitton that I'm not entirely sure I understand, 
-but that is necessary in connecting the Arduino to a live browser.
-
-I've added some basic graphics and sounds to the code, the potentionmeter and the light sensor are used to change the colour of the background while the button draws an "explosion" of circles.
-*/
-
 
 //BRANDON HRUBECKY
 
@@ -169,6 +162,7 @@ fill(value2,0,255);
 }
 
 function playMagic() {
+    
     if (value1 == 1) {
         
         song.loop();
@@ -190,9 +184,12 @@ function playMagic() {
 //*https://editor.p5js.org/aferriss/sketches/H1KNdXLdf*//
 //*https://editor.p5js.org/allison.parrish/sketches/HyknCgw5b*//
 function drawSquares() {
+    
     for (let i = 0; i < 10; i++) {
         num = Math.floor(Math.random() * windowWidth + 200);
+        
         num2 = Math.floor(Math.random() * windowHeight + 200);
+        
         num3 = Math.floor(Math.random() * 300);
         fill(200, 75 + num2, 45 + num);
         noStroke();
@@ -202,8 +199,11 @@ function drawSquares() {
 
 
 //Halloween song function
+//I couldn't figure out how to stop the halloween song after you remove your hand from light sensor.
 function playSpooky() {
+    
     song2.play();
+    
     fill(255);
     
     textSize(40);
